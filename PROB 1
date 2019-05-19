@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	
+	int size, e, f, sum, temp, arr[10];
+	double average;
+	cout << "Enter array size: ";
+	cin >> size;
+	cout << "Enter array elements: ";
+	for(e = 0; e < size; e++)
+	{
+		cin >> arr[e];
+	}
+	cout << "Array is sorting...\n";
+	
+	for(e = 0; e < size; e++)
+	{
+		for(f = e + 1; f < size; f++)
+		{
+			if(arr[e] > arr[f])
+			{
+				temp = arr[e];
+				arr[e] = arr[f];
+				arr[f] = temp;
+			}
+		}
+	}
+	
+	for(e = 0; e < size; e++)
+	{
+		sum += arr[e];
+	}
+	
+	cout << "Sorted array: ";
+	for(e = 0; e < size; e++)
+	{
+		cout << arr[e] << " ";
+	}
+	
+	cout << "\n";
+	cout << "Sum = " << sum << endl;
+	
+	average = sum / size;
+	cout << "Average = " << average << endl; 
+	
+	return 0;
+	
+}
