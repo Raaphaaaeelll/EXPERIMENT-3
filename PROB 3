@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int size, temp;
+	int a, b;
+	char array[20];
+	
+	cout << "Enter array size: ";
+	cin >> size;
+	cout << "Enter array elements: ";  
+	
+	for(a = 0; a < size; a++)
+	{
+		cin >> array[a];
+	}
+	
+	b = size - 1;
+	a = 0;
+	
+	while(a < b)
+	{
+		temp = array[a];
+		array[a] = array[b];
+		array[b] = temp;
+		a++;
+		b--;
+	}
+	
+	for(a = 0; a < size; a++)
+	{
+		cout << array[a] << " ";
+	}
+	
+	return 0;	
+}
